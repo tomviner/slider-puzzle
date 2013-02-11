@@ -70,7 +70,7 @@ class Board:
         return True
 
     def slide(self, tile):
-        gap = b.find_gap()
+        gap = self.find_gap()
         self.board[tile], self.board[gap] = self.board[gap], self.board[tile]
         return self
 
