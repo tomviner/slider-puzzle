@@ -170,7 +170,7 @@ class Board:
                 dx = abs(i-correct_location[0])**2
                 dy = abs(j-correct_location[1])**2
                 score += dx + dy
-        return score
+        return self.depth + score
 
 
     def __eq__(self, other):
