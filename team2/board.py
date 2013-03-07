@@ -53,6 +53,9 @@ class Board:
                 )
             ).replace(str(self.gap_num), ' ')
 
+    def hash(self):
+        return hash(self.tile_string())
+
     def __repr__(self):
         res = "depth: " + '>'*self.depth + '\n'
         w = max(map(lambda x:len(str(x)), self.board.values()))+1
